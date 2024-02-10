@@ -13,7 +13,7 @@ const Computers = () => {
       <hemisphereLight intensity={0.25} groundColor="black" />
       <pointLight intensity={10} />
       <spotLight position={[2, 5, 5]} angle={1} penumbra={1} intensity={150} castShadow shadow-mapSize={1024} /> 
-      <primitive object={computer.scene} scale={0.75} position={[1.5, -3.5, -0.75]} rotation={[-0.01, -0.2, -0.1]} />
+      <primitive object={computer.scene} scale={0.6} position={[1.5, -2.55, -0.75]} rotation={[-0.01, -0.2, -0.1]} />
     </mesh>
   )
 }
