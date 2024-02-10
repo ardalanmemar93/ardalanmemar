@@ -26,12 +26,15 @@ const ComputersCanvas = () => {
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
+      // Check if the user is on a mobile device
       const mediaQuery = window.matchMedia('(max-width: 500px)')
-
+      // Set the state to the result of the media query
       setIsMobile(mediaQuery.matches)
+      // Create a function to handle the change of the media query
       const handleMediaQueryChange = (e) => {setIsMobile(e.matches)}
-
+      // Add the event listener to the media query
       mediaQuery.addEventListener('change', handleMediaQueryChange)
+      // Remove the event listener when the component is unmounted
       return () => mediaQuery.removeEventListener('change', handleMediaQueryChange)
     }, [])
 
